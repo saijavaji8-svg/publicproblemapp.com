@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Public Problems App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div class="brand">
+                <div class="brand-badge">P</div>
+                <span>Public Problems</span>
+            </div>
+
+            <!-- Three Lines Menu -->
+            <button class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </header>
+
+
+        <!-- MAIN SECTION -->
+        <section class="hero">
+
+            <h1>Speak Your Problem</h1>
+
+            <p>
+                Tap the microphone and explain your problem.
+                Your problem will be converted into text and saved automatically.
+            </p>
+
+
+            <!-- MICROPHONE ANIMATION -->
+            <div class="mic-wrap">
+
+                <div class="orbit"></div>
+                <div class="orbit two"></div>
+                <div class="orbit three"></div>
+
+                <button class="mic-btn" id="micBtn">
+                    🎙️
+                </button>
+
+            </div>
+
+            <div class="status" id="status">
+                Tap the microphone to start
+            </div>
+
+        </section>
+
+
+        <!-- CURRENT RECORDING -->
+        <section class="card">
+
+            <h2>Current Recording</h2>
+
+            <div class="live-text" id="liveText">
+                Your converted English text will appear here.
+            </div>
+
+        </section>
+
+
+        <!-- SAVED PROBLEMS -->
+        <section class="card">
+
+            <h2>Saved Problems</h2>
+
+            <div class="problems" id="problemsList">
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PROFILE DRAWER -->
+
+    <div class="drawer-backdrop" id="drawerBackdrop">
+
+        <aside class="drawer">
+
+            <div class="drawer-head">
+
+                <h3>Your Profile</h3>
+
+                <button class="close-btn" id="closeDrawer">
+                    ✕
+                </button>
+
+            </div>
+
+
+            <form class="profile-form" id="profileForm">
+
+                <div class="input-group">
+
+                    <label for="name">
+                        Name
+                    </label>
+
+                    <input
+                        id="name"
+                        type="text"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="mobile">
+                        Mobile Number
+                    </label>
+
+                    <input
+                        id="mobile"
+                        type="tel"
+                        placeholder="Enter mobile number"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="email">
+                        Gmail
+                    </label>
+
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="example@gmail.com"
+                        required
+                    >
+
+                </div>
+
+
+                <button class="save-btn" type="submit">
+                    Save Profile
+                </button>
+
+            </form>
+
+
+            <p class="profile-note">
+                Your profile is stored in your browser.
+            </p>
+
+        </aside>
+
+    </div>
+
+
+    <!-- TOAST MESSAGE -->
+
+    <div class="toast" id="toast"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
